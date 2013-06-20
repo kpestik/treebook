@@ -4,10 +4,11 @@
 
 .status {
 	border-bottom: solid 1px #CCC;
+	padding: 5px;
 }
 
-.status .p {
-	margin: 4px 0;
+.status p {
+	padding: 1px 0;
 }
 
 .status .admin {
