@@ -5,6 +5,7 @@ class UserTest < ActiveSupport::TestCase
  	user = User.new
  	assert !user.save
  	assert !user.errors[:first_name].empty?
+ 	assert user.errors[:first_name].include?("Must be formatted properly.")
  end
 
   test "a user should enter a last name" do
