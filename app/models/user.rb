@@ -16,9 +16,11 @@ class User < ActiveRecord::Base
                            uniqueness: true,
                            format: {
                             with: /a-zA-Z0-9_-/,
-                            message: 'Must be formatted properly.'
+                            message: 'Must not include spaces. Underscores are acceptable.'
                            }
-
+  validates :email, presence: true
+  validates :password, presence: true
+  validates :password_confirmation, presence: true
   has_many :statuses
 
   def full_name
