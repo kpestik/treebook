@@ -7,12 +7,17 @@ class StatusTest < ActiveSupport::TestCase
 		assert !status.errors[:content].empty?
 	end
 
-	test "a status should not save without a user id" do
+	test "that a status's content is at least 2 letters long" do
 		status = Status.new
+		status.content = "H"
 		assert !status.save
-		status.content = "This is a test case"
-		status.user_id = "This is a test user"
-		puts status.errors.inspect
+		assert !status.errors[:content].empty?
+	end
+
+	test "a status should have a user id" do
+		status = Status.new
+		status.content = "Hello"
+		assert !status.save
 		assert !status.errors[:user_id].empty?
 	end
 end
