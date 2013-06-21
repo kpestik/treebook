@@ -31,7 +31,7 @@ class UserTest < ActiveSupport::TestCase
     user.password = user.password_confirmation = 'dickbutts'
 
   	user.profile_name = "vg cats"
-    
+
   	assert !user.save
   	assert !user.errors[:profile_name].empty?
   	assert user.errors[:profile_name].include?("Must not include spaces. Underscores are acceptable.")
