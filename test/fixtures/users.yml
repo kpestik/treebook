@@ -3,3 +3,9 @@ kile:
   last_name: "Pestik"
   email: "kpestik@gmail.com"
   profile_name: "kpestik"
+
+jim:
+  first_name: "Jim"
+  last_name: "Hoskins"
+  email: "jhoskins@gmail.com"
+  profile_name: "jhoskins"

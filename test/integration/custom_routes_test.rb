@@ -18,4 +18,9 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
   	assert_response :success
   end
 
+  test "That a profile page works" do
+    get '/kpestik'
+    assert_response :success
+  end
+
 end
